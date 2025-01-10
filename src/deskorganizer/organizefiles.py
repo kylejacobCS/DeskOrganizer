@@ -23,7 +23,7 @@ import pandas as pd
 from pathlib import Path
 import getpass
 
-print("Pandas installed and imported successfully!")
+#print("Pandas installed and imported successfully!")
 
 
 def navigate_to_desktop():
@@ -48,10 +48,10 @@ def navigate_to_desktop():
     # Move to Desktop folder
     try:
         os.chdir(desktop_path)
-        print(f"Spostato nella cartella Desktop: {os.getcwd()}")
+        print(f"Moving into the Desktop folder: {os.getcwd()}")
         return os.getcwd()  
     except Exception as e:
-        print(f"Errore nello spostamento: {e}")
+        print(f"Error occured: {e}")
         return None
 
 def organizefiles():
@@ -123,4 +123,5 @@ def organizefiles():
 
 organizefiles()
 if __name__ == "__main__":
+    print('Ready to organize your Desktop...')
     organizefiles()
