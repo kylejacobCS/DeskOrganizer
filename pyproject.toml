@@ -3,19 +3,17 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "DeskOrganizer"
+name = "deskorganizer"
 version = "0.0.1"
-
-dynamic = ["dependencies"]
-[tool.setuptools.dynamic]
-dependencies = {file = ["requirements.txt"]}
-
-authors = [
-  { name="kappa ", email="kappann01@gmail.com" },
+dependencies = [
+  "pandas"
 ]
-description = "A small example package"
+authors = [
+  { name="kappa", email="kappann01@gmail.com" },
+]
+description = "desktop file organizer"
 readme = "README.md"
-requires-python = ">=3.9"
+requires-python = ">=3.0"
 classifiers = [
     "Programming Language :: Python :: 3",
     "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
@@ -25,3 +23,6 @@ classifiers = [
 [project.urls]
 Homepage = "https://github.com/kylejacobCS/DeskOrganizer"
 Issues = "https://github.com/kylejacobCS/DeskOrganizer/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/deskorganizer"]
